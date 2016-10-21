@@ -4,13 +4,23 @@ module Smsc
   # Response parse
   class Response
     class << self
-      def parse(body, request_params)
+      # Parse and wrap response in models, raise errors
+      #
+      # @param body [String] response body
+      # @param parse_configuration [Hash] response parse configuration
+      #
+      # @raise [Smsc::ClientError] any of client errors
+      #
+      def parse(body, parse_configuration)
         json = JSON.parse(body, symbolize_names: true)
-        raise_client_errors(json, request_params[:errors] || {})
+        raise_client_errors(json, parse_configuration[:errors] || {})
 
-        request_params[:model].new(json)
+        parse_configuration[:model].new(json)
       end
 
+      # Raise errors if response contain error code
+      #
+      # @private
       def raise_client_errors(json, error_map)
         error_code = json[:error_code]
         error_message = json[:error]

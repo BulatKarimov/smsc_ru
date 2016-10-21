@@ -9,7 +9,16 @@ module Smsc
       # @param phones [String] user phone
       # @param message [String] sms message
       # @param options [Hash]
+      #
       # @return [Smsc::SendSmsStatus] response status
+      #
+      # @example
+      #  #send one sms
+      #  client.send_sms("79999999999", "Password: 123")
+      #  #send multiple sms
+      #  client.send_sms("79999999999,78888888888", "Password: 123")
+      #  # add additional parameters
+      #  client.send_sms("79999999999,78888888888", "Password: 123", translit: 1)
       #
       def send_sms(phones, message, options = {})
         params = options.merge(phones: phones, mes: message)

@@ -1,5 +1,11 @@
 module Smsc
-  # Balance model
+  # Status model
+  #
+  # @attr status [Numeric] numeric status for sended sms
+  # @attr last_date [DateTime] date for last changed status
+  # @attr last_timestamp [Integer] timestamp for last changed status
+  # @attr err [Integer] error code if sms not delivered
+  #
   class Status
     include Virtus.model
 

@@ -1,3 +1,4 @@
 module Smsc
-  VERSION = '0.1.0'.freeze
+  # Smsc version
+  VERSION = '0.1.1'.freeze
 end

@@ -9,7 +9,12 @@ module Smsc
       # @param phone [String] user phone
       # @param sms_id [Integer] sms id
       # @param options [Hash]
+      #
       # @return [Smsc::Status] status object
+      #
+      # @example
+      #  #get status about sms delivery
+      #  client.status('78886664433', 123)
       #
       def status(phone, sms_id, options = {})
         params = options.merge(phone: phone, id: sms_id)

@@ -2,9 +2,12 @@ require 'faraday'
 require 'json'
 
 module FaradayMiddleware
-  # @private
+  # Raise exceptions for network errors
   class RaiseHttpException < Faraday::Middleware
     # Smsc always return 200, so we handle only network errors
+    #
+    # @param env [Faraday::Env] middleware environment
+    #
     def call(env)
       @app.call(env).on_complete do |response|
         case response[:status].to_i

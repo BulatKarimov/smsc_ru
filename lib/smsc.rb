@@ -7,11 +7,16 @@ require_relative 'smsc/client'
 
 # Namespace for smsc API client
 module Smsc
+  # Smsc api default host
   DEFAULT_HOST = 'smsc.ru'.freeze
+  # Use https for api
   DEFAULT_SSL = true
+  # Default logger for gem
   DEFAULT_LOGGER = Logger.new(STDOUT)
 
   class << self
+    # Create default configuration
+    #
     def config
       @config ||= Config.new(
         login: nil,
@@ -22,6 +27,8 @@ module Smsc
       )
     end
 
+    # Method for external configuration
+    #
     def configure
       yield(config)
     end

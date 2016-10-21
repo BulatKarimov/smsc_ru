@@ -1,5 +1,9 @@
 module Smsc
   # Status for send sms endpoint
+  #
+  # @attr id [Integer] id operation
+  # @attr cnt [Integer] sended sms count
+  #
   class SendSmsStatus
     include Virtus.model
 

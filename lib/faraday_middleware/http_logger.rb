@@ -1,17 +1,26 @@
 require 'faraday'
 
-# @private
+# namespace for faraday middleware
 module FaradayMiddleware
-  # @private
+  # Log all request to logger, filter login and password
   class HttpLogger < Faraday::Middleware
     extend Forwardable
     def_delegators :@logger, :debug, :info, :warn, :error, :fatal
 
+    # Create middleware object
+    #
+    # params app [Faraday::Adapter::NetHttp] faraday adapter
+    # params logger [Logger] middleware login
+    #
     def initialize(app, logger)
       @app = app
       @logger = logger
     end
 
+    # Log request to logger
+    #
+    # @param env [Faraday::Env] middleware environment
+    #
     def call(env)
       start_time = Time.now
       info  { request_info(env) }

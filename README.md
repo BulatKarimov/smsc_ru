@@ -2,9 +2,7 @@
 [![Build Status](https://travis-ci.org/SPBTV/smsc_ru.svg?branch=master)](https://travis-ci.org/SPBTV/smsc_ru)
 [![Test Coverage](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/coverage.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/coverage)
 [![Code Climate](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/gpa.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/feed)
-[![Issue Count](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/issue_count.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/feed)
 [![Inline docs](http://inch-ci.org/github/SPBTV/smsc_ru.svg?branch=master)](http://inch-ci.org/github/SPBTV/smsc_ru)
-[![Dependency Status](https://gemnasium.com/badges/github.com/SPBTV/smsc_ru.svg)](https://gemnasium.com/github.com/SPBTV/smsc_ru)
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](./LICENSE.txt)
 
 # Smsc_ru - Ruby API Client for smsc.ru
@@ -36,8 +34,8 @@ Smsc.configure do |config|
  # Optional configuration
  # default: smsc.ru
  config.host = 'custom_endpoint'
- # default: false
- config.ssl = true
+ # default: true
+ config.ssl = false
  # default Logger.new(STDOUT)
  config.logger = CustomerLogger.new
 end
@@ -59,16 +57,16 @@ Usage example:
  client = Smsc::Client.new
  
  # send one sms
- client.send_sms("79999999999", "Ваш пароль: 123")
+ client.send_sms("79999999999", "Password: 123")
  
  # send multiple sms
- client.send_sms("79999999999,78888888888", "Ваш пароль: 123")
+ client.send_sms("79999999999,78888888888", "Password: 123")
  
   # raise error on problem
   client.send_sms("79999", "Ваш пароль: 123") # => error Smsc::BadRequest.new('invalid phone')
  
  # add additional parameters
- client.send_sms("79999999999,78888888888", "Ваш пароль: 123", translit: 1)
+ client.send_sms("79999999999,78888888888", "Password: 123", translit: 1)
  
  # Check sms status
  client.status(12345, "79999999999") # => Smsc::Status model with attributes

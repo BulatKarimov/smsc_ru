@@ -3,10 +3,11 @@ require_relative '../../lib/faraday_middleware/http_logger'
 require_relative '../../lib/faraday_middleware/raise_http_exception'
 
 module Smsc
-  # @private
+  # Create connection to smsc
   module Connection
     private
 
+    # @private
     def connection(url)
       Faraday.new(url: url) do |connection|
         connection.params['login'] = config.login

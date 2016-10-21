@@ -2,12 +2,14 @@ require 'addressable/template'
 require_relative 'response'
 
 module Smsc
-  # @private
+  # Build url from template with specified parameters
   module Request
+    # Smsc url template
     URL_TEMPLATE = '{scheme}://{host}/sys/{endpoint}.php{?params*}'.freeze
 
     private
 
+    # @private
     def request(request_params)
       request_url = Addressable::Template.new(URL_TEMPLATE).expand(
         scheme: config.ssl ? 'https' : 'http',
