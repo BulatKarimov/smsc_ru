@@ -5,7 +5,7 @@
 [![Issue Count](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/issue_count.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/feed)
 [![Inline docs](http://inch-ci.org/github/SPBTV/smsc_ru.svg?branch=master)](http://inch-ci.org/github/SPBTV/smsc_ru)
 [![Dependency Status](https://gemnasium.com/badges/github.com/SPBTV/smsc_ru.svg)](https://gemnasium.com/github.com/SPBTV/smsc_ru)
-[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)]()
+[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](./LICENSE.txt)
 
 # Smsc_ru - Ruby API Client for smsc.ru
 
