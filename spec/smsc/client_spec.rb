@@ -101,6 +101,16 @@ RSpec.describe Smsc::Client do
           }
         end
       end
+
+      it 'unknown error raised as client error' do
+        VCR.use_cassette('unknown_error') do
+          expect do
+            subject.send_sms('79998887766', 'test message')
+          end.to raise_error(Smsc::ClientError) { |error|
+            expect(error.message).to eq('unknown error')
+          }
+        end
+      end
     end
 
     context 'server' do
