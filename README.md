@@ -1,3 +1,8 @@
+[![Gem Version](https://badge.fury.io/rb/smsc_ru.svg)](https://badge.fury.io/rb/smsc_ru)
+[![Test Coverage](https://codeclimate.com/github/SPBTV/smsc_ru/badges/coverage.svg)](https://codeclimate.com/github/SPBTV/smsc_ru/coverage)
+[![Code Climate](https://codeclimate.com/github/SPBTV/smsc_ru/badges/gpa.svg)](https://codeclimate.com/github/SPBTV/smsc_ru)
+[![Issue Count](https://codeclimate.com/github/SPBTV/smsc_ru/badges/issue_count.svg)](https://codeclimate.com/github/SPBTV/smsc_ru)
+
 # Smsc_ru - Ruby API Client for smsc.ru
 
 ## Installation
