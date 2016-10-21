@@ -1,8 +1,11 @@
 [![Gem Version](https://badge.fury.io/rb/smsc_ru.svg)](https://badge.fury.io/rb/smsc_ru)
 [![Build Status](https://travis-ci.org/SPBTV/smsc_ru.svg?branch=master)](https://travis-ci.org/SPBTV/smsc_ru)
-[![Test Coverage](https://codeclimate.com/github/SPBTV/smsc_ru/badges/coverage.svg)](https://codeclimate.com/github/SPBTV/smsc_ru/coverage)
-[![Code Climate](https://codeclimate.com/github/SPBTV/smsc_ru/badges/gpa.svg)](https://codeclimate.com/github/SPBTV/smsc_ru)
-[![Issue Count](https://codeclimate.com/github/SPBTV/smsc_ru/badges/issue_count.svg)](https://codeclimate.com/github/SPBTV/smsc_ru)
+[![Test Coverage](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/coverage.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/coverage)
+[![Code Climate](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/gpa.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/feed)
+[![Issue Count](https://codeclimate.com/repos/580a21439bd75735b900174a/badges/04d08f91b313516cc1ce/issue_count.svg)](https://codeclimate.com/repos/580a21439bd75735b900174a/feed)
+[![Inline docs](http://inch-ci.org/github/SPBTV/smsc_ru.svg?branch=master)](http://inch-ci.org/github/SPBTV/smsc_ru)
+[![Dependency Status](https://gemnasium.com/badges/github.com/SPBTV/smsc_ru.svg)](https://gemnasium.com/github.com/SPBTV/smsc_ru)
+[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)]()
 
 # Smsc_ru - Ruby API Client for smsc.ru
 
