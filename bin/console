@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'smsc_ru'
+require 'pry'
+
+Smsc.configure do |config|
+  config.login = ENV.fetch('SMSC_LOGIN')
+  config.password = ENV.fetch('SMSC_PASSWORD')
+end
+
+Pry.start self
