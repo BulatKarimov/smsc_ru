@@ -63,7 +63,7 @@ Usage example:
  client.send_sms("79999999999,78888888888", "Password: 123")
  
   # raise error on problem
-  client.send_sms("79999", "Ваш пароль: 123") # => error Smsc::BadRequest.new('invalid phone')
+  client.send_sms("79999", "Ваш пароль: 123") # => raise Smsc::BadRequest.new('invalid phone')
  
  # add additional parameters
  client.send_sms("79999999999,78888888888", "Password: 123", translit: 1)

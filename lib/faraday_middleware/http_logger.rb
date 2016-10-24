@@ -10,7 +10,7 @@ module FaradayMiddleware
     # Create middleware object
     #
     # params app [Faraday::Adapter::NetHttp] faraday adapter
-    # params logger [Logger] middleware login
+    # params logger [Logger] middleware logger
     #
     def initialize(app, logger)
       @app = app

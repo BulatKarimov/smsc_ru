@@ -19,8 +19,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'faraday', '~> 0.9.0'
-  spec.add_dependency 'addressable', '~> 2.4'
+  spec.add_dependency 'faraday', '~> 0.9'
+  spec.add_dependency 'addressable', '~> 2.3'
   spec.add_dependency 'virtus', '~> 1.0'
 
   spec.add_development_dependency 'bundler', '>= 1.9'
@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.3'
   spec.add_development_dependency 'vcr', '~> 3.0'
   spec.add_development_dependency 'pry', '~> 0.10'
-  spec.add_development_dependency 'webmock', '~> 2.1.0'
+  spec.add_development_dependency 'webmock', '~> 2.1'
   spec.add_development_dependency 'rubocop', '~> 0.44'
   spec.add_development_dependency 'yard', '~> 0.9'
 end
