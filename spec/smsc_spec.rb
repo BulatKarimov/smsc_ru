@@ -10,7 +10,7 @@ RSpec.describe Smsc do
   end
 
   it 'default options should be specify' do
-    [:host, :ssl, :logger].each do |option|
+    [:host, :ssl, :logger, :encoding].each do |option|
       expect(Smsc.config.send(option)).not_to be_nil
     end
   end

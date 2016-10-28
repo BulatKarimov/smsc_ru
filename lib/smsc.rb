@@ -13,6 +13,8 @@ module Smsc
   DEFAULT_SSL = true
   # Default logger for gem
   DEFAULT_LOGGER = Logger.new(STDOUT)
+  # Encoding
+  DEFAULT_ENCODING = 'utf-8'.freeze
 
   class << self
     # Create default configuration
@@ -23,6 +25,7 @@ module Smsc
         password: nil,
         host: DEFAULT_HOST,
         ssl: DEFAULT_SSL,
+        encoding: DEFAULT_ENCODING,
         logger: DEFAULT_LOGGER
       )
     end

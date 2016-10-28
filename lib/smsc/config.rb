@@ -5,6 +5,7 @@ module Smsc
   # @attr password [String] user password
   # @attr host [String] api host
   # @attr ssl [Boolean] use https for requests
+  # @attr encoding [String] character encoding
   # @attr logger [Logger] logger
   #
   class Config
@@ -13,6 +14,7 @@ module Smsc
       :password,
       :host,
       :ssl,
+      :encoding,
       :logger
 
     # Create configuration object
@@ -22,6 +24,7 @@ module Smsc
     # @option password [String] user password
     # @option host [String] api host
     # @option ssl [Boolean] use https for requests
+    # @option encoding [String] character encoding
     # @option logger [Logger] logger instance
     #
     # @example

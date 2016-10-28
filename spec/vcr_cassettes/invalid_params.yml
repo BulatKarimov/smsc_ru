@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://smsc.ru/sys/send.php?fmt=3&login=test_login&mes=test_message&phones=123&psw=test_password
+    uri: https://smsc.ru/sys/send.php?charset=utf-8&fmt=3&login=test_login&mes=test_message&phones=123&psw=test_password
     body:
       encoding: US-ASCII
       string: ''

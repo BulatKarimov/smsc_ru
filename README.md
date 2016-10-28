@@ -30,7 +30,7 @@ Smsc.configure do |config|
  # Mandatory attributes, creating client fail, if it not specified
  config.login = 'your_login'
  config.password = 'your_password' # password or MD5 hash
-  
+
  # Optional configuration
  # default: smsc.ru
  config.host = 'custom_endpoint'
@@ -38,6 +38,8 @@ Smsc.configure do |config|
  config.ssl = false
  # default Logger.new(STDOUT)
  config.logger = CustomerLogger.new
+ # default utf-8
+ config.encoding = 'windows-1251
 end
 ```
 
@@ -55,22 +57,22 @@ end
 Usage example:
 ```ruby
  client = Smsc::Client.new
- 
+
  # send one sms
  client.send_sms("79999999999", "Password: 123")
- 
+
  # send multiple sms
  client.send_sms("79999999999,78888888888", "Password: 123")
- 
+
   # raise error on problem
   client.send_sms("79999", "Ваш пароль: 123") # => raise Smsc::BadRequest.new('invalid phone')
- 
+
  # add additional parameters
  client.send_sms("79999999999,78888888888", "Password: 123", translit: 1)
- 
+
  # Check sms status
  client.status(12345, "79999999999") # => Smsc::Status model with attributes
- 
+
  # Receive balance
  balance = client.balance
 ```
@@ -107,4 +109,3 @@ Licensed under the Apache License, Version 2.0 (the ["License"](LICENSE)); you m
 You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
-

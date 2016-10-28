@@ -56,6 +56,14 @@ RSpec.describe Smsc::Client do
         expect(response.cnt).to eq(1)
       end
     end
+
+    it 'can override default encoding for request' do
+      VCR.use_cassette('send_sms_another_charset') do
+        response = subject.send_sms('79998887766', 'Тестовое сообщение', charset: 'windows-1251')
+
+        expect(response).to be_a(Smsc::SendSmsStatus)
+      end
+    end
   end
 
   context 'status' do
