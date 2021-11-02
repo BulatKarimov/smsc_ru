@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'faraday', '~> 0.9'
+  spec.add_dependency 'faraday'
   spec.add_dependency 'addressable', '~> 2.3'
   spec.add_dependency 'virtus', '~> 1.0'
 
